@@ -8,7 +8,7 @@ from .utils import *
 # The style transfer network
 class StyleTransferNetwork(nn.Module):
   def __init__(self,
-               device,
+               device, # "cpu" for cpu, "cuda" for gpu
                enc_state_dict, # The state dict of the pretrained vgg19
                learning_rate=1e-4,
                learning_rate_decay=5e-5, # Decay parameter for the learning rate
